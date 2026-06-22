@@ -253,7 +253,7 @@ export default function FriendsLanding({ onEnter, onBack }: { onEnter: () => voi
               transition={{ duration: 1.3 }}
               style={{ marginBottom: '2.6rem', maxWidth: 580 }}
             >
-              <p style={{ fontFamily: PF, fontSize: 'clamp(1rem,2.8vw,1.65rem)', color: 'rgba(255,255,255,.9)', letterSpacing: '.02em', lineHeight: 1.65 }}>
+              <p style={{ fontFamily: PF, fontSize: 'clamp(1rem,2.8vw,1.65rem)', color: '#fff', letterSpacing: '.02em', lineHeight: 1.65, textShadow: '0 2px 20px rgba(0,0,0,0.95), 0 0 40px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,1)' }}>
                 {t1}
                 {phase === 'text1' && t1.length < L1.length && (
                   <span style={{ display: 'inline-block', width: 2, height: '1em', background: '#ffd700', marginLeft: 3, verticalAlign: 'text-bottom', animation: 'blink 1s step-end infinite' }} />
@@ -274,7 +274,7 @@ export default function FriendsLanding({ onEnter, onBack }: { onEnter: () => voi
               transition={{ duration: 1.3 }}
               style={{ marginBottom: '4.5rem', maxWidth: 520 }}
             >
-              <p style={{ fontFamily: CO, fontSize: 'clamp(.9rem,2.2vw,1.22rem)', color: 'rgba(255,220,150,.58)', fontStyle: 'italic', letterSpacing: '.03em', lineHeight: 1.8 }}>
+              <p style={{ fontFamily: CO, fontSize: 'clamp(.9rem,2.2vw,1.22rem)', color: 'rgba(255,220,150,.95)', fontStyle: 'italic', letterSpacing: '.03em', lineHeight: 1.8, textShadow: '0 2px 18px rgba(0,0,0,0.95), 0 0 35px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,1)' }}>
                 {t2}
                 {t2.length < L2.length && (
                   <span style={{ display: 'inline-block', width: 2, height: '1em', background: '#ffd700', marginLeft: 3, verticalAlign: 'text-bottom', animation: 'blink 1s step-end infinite' }} />

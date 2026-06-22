@@ -22,19 +22,28 @@ interface Polaroid {
   voiceHint?: string
 }
 
+const BASE = '/alb%C3%BCm%C3%BCm%C3%BCz'
+
+function ap(name: string) {
+  return `${BASE}/${name.replace(/ /g, '%20').replace(/\(/g, '%28').replace(/\)/g, '%29')}`
+}
+
 const POLAROIDS: Polaroid[] = [
-  { id:1,  file:'/photos/biz/1.jpg',  caption:'İlk fotoğrafımız',         date:'14 Şub \'23', gradient:'linear-gradient(145deg,#1a0010 0%,#4d0030 50%,#ff4d88 100%)', rotation:-6,  x:'8%',  y:'12%', scale:1,    zBase:5  },
-  { id:2,  file:'/photos/biz/2.jpg',  caption:'Sabah kahvesi',             date:'15 Şub \'23', gradient:'linear-gradient(145deg,#0a0a18 0%,#1e1e50 50%,#6666ff 100%)', rotation:4,   x:'36%', y:'5%',  scale:.88,  zBase:4  },
-  { id:3,  file:'/photos/biz/3.jpg',  caption:'Sen gülünce her şey güzel', date:'20 Mar \'23', gradient:'linear-gradient(145deg,#1a0d00 0%,#4d2600 50%,#ff9900 100%)', rotation:-3,  x:'65%', y:'8%',  scale:.92,  zBase:6  },
-  { id:4,  file:'/photos/biz/4.jpg',  caption:'Parkta yürürken',           date:'8 Nis \'23',  gradient:'linear-gradient(145deg,#061a06 0%,#1a4020 50%,#44aa44 100%)', rotation:7,   x:'82%', y:'15%', scale:.85,  zBase:3  },
-  { id:5,  file:'/photos/biz/5.jpg',  caption:'Sürpriz tatil',             date:'1 May \'23',  gradient:'linear-gradient(145deg,#001428 0%,#003055 50%,#0088cc 100%)', rotation:-8,  x:'5%',  y:'45%', scale:.95,  zBase:7  },
-  { id:6,  file:'/photos/biz/6.jpg',  caption:'Yağmurda ıslandık',         date:'10 Haz \'23', gradient:'linear-gradient(145deg,#0d0014 0%,#280040 50%,#8800cc 100%)', rotation:5,   x:'28%', y:'52%', scale:1.05, zBase:9  },
-  { id:7,  file:'/photos/biz/7.jpg',  caption:'Doğum günün',               date:'23 Haz \'23', gradient:'linear-gradient(145deg,#1a0005 0%,#4d001a 50%,#ee0055 100%)', rotation:-4,  x:'60%', y:'48%', scale:.9,   zBase:6  },
-  { id:8,  file:'/photos/biz/8.jpg',  caption:'Şehrin ışıkları',           date:'15 Tem \'23', gradient:'linear-gradient(145deg,#08080e 0%,#181828 50%,#334488 100%)', rotation:9,   x:'82%', y:'50%', scale:.82,  zBase:4  },
-  { id:9,  file:'/photos/biz/9.jpg',  caption:'Deniz kıyısında',           date:'3 Ağu \'23',  gradient:'linear-gradient(145deg,#001020 0%,#003040 50%,#0099cc 100%)', rotation:-7,  x:'18%', y:'72%', scale:.88,  zBase:5  },
-  { id:10, file:'/photos/biz/10.jpg', caption:'1. yılımız — sonsuzluk',    date:'14 Şub \'24', gradient:'linear-gradient(145deg,#1a0010 0%,#500030 50%,#ff4d88 100%)', rotation:3,   x:'50%', y:'68%', scale:1.1,  zBase:10, voiceHint:'Bir mesaj var 🎙' },
-  { id:11, file:'/photos/biz/11.jpg', caption:'Sabah güneşi',              date:'5 Eyl \'23',  gradient:'linear-gradient(145deg,#18100a 0%,#4a2800 50%,#ff8800 100%)', rotation:-5,  x:'75%', y:'72%', scale:.86,  zBase:3  },
-  { id:12, file:'/photos/biz/12.jpg', caption:'Cadılar bayramı',           date:'31 Eki \'23', gradient:'linear-gradient(145deg,#0c0018 0%,#28004a 50%,#8800bb 100%)', rotation:6,   x:'90%', y:'72%', scale:.8,   zBase:2  },
+  { id:1,  file: ap('WhatsApp Image 2026-06-23 at 01.23.35.jpeg'),      caption:'Seninle her an güzel',       date:'♡', gradient:'linear-gradient(145deg,#1a0010 0%,#4d0030 50%,#ff4d88 100%)', rotation:-6,  x:'5%',  y:'6%',  scale:1,    zBase:5  },
+  { id:2,  file: ap('WhatsApp Image 2026-06-23 at 01.23.36.jpeg'),      caption:'En güzel gülüşün',           date:'♡', gradient:'linear-gradient(145deg,#0a0a18 0%,#1e1e50 50%,#6666ff 100%)', rotation:4,   x:'25%', y:'3%',  scale:.9,   zBase:4  },
+  { id:3,  file: ap('WhatsApp Image 2026-06-23 at 01.23.36 (1).jpeg'),  caption:'Seni seviyorum',             date:'♡', gradient:'linear-gradient(145deg,#1a0d00 0%,#4d2600 50%,#ff9900 100%)', rotation:-3,  x:'47%', y:'6%',  scale:.88,  zBase:6  },
+  { id:4,  file: ap('WhatsApp Image 2026-06-23 at 01.23.36 (2).jpeg'),  caption:'Favorilerimden biri',        date:'♡', gradient:'linear-gradient(145deg,#061a06 0%,#1a4020 50%,#44aa44 100%)', rotation:7,   x:'68%', y:'4%',  scale:.85,  zBase:3  },
+  { id:5,  file: ap('WhatsApp Image 2026-06-23 at 01.23.36 (3).jpeg'),  caption:'Bu anı çok sevdim',          date:'♡', gradient:'linear-gradient(145deg,#001428 0%,#003055 50%,#0088cc 100%)', rotation:-5,  x:'84%', y:'8%',  scale:.92,  zBase:7  },
+  { id:6,  file: ap('WhatsApp Image 2026-06-23 at 01.23.36 (4).jpeg'),  caption:'Her an seninle',             date:'♡', gradient:'linear-gradient(145deg,#0d0014 0%,#280040 50%,#8800cc 100%)', rotation:5,   x:'2%',  y:'42%', scale:.95,  zBase:8  },
+  { id:7,  file: ap('WhatsApp Image 2026-06-23 at 01.23.37.jpeg'),      caption:'Sen varsın, yeter',          date:'♡', gradient:'linear-gradient(145deg,#1a0005 0%,#4d001a 50%,#ee0055 100%)', rotation:-4,  x:'20%', y:'46%', scale:1.05, zBase:9  },
+  { id:8,  file: ap('WhatsApp Image 2026-06-23 at 01.23.37 (1).jpeg'),  caption:'Seninle her yer güzel',      date:'♡', gradient:'linear-gradient(145deg,#08080e 0%,#181828 50%,#334488 100%)', rotation:8,   x:'40%', y:'44%', scale:.87,  zBase:5  },
+  { id:9,  file: ap('WhatsApp Image 2026-06-23 at 01.23.37 (2).jpeg'),  caption:'Gözlerim seni arıyor',       date:'♡', gradient:'linear-gradient(145deg,#001020 0%,#003040 50%,#0099cc 100%)', rotation:-7,  x:'60%', y:'42%', scale:.93,  zBase:6  },
+  { id:10, file: ap('WhatsApp Image 2026-06-23 at 01.23.37 (3).jpeg'),  caption:'Bu gülüş beni mahvetti',     date:'♡', gradient:'linear-gradient(145deg,#1a0010 0%,#500030 50%,#ff4d88 100%)', rotation:3,   x:'78%', y:'46%', scale:.88,  zBase:4  },
+  { id:11, file: ap('WhatsApp Image 2026-06-23 at 01.23.37 (4).jpeg'),  caption:'Kalbim seninle',             date:'♡', gradient:'linear-gradient(145deg,#18100a 0%,#4a2800 50%,#ff8800 100%)', rotation:-5,  x:'90%', y:'44%', scale:.82,  zBase:3  },
+  { id:12, file: ap('WhatsApp Image 2026-06-23 at 01.23.37 (5).jpeg'),  caption:'Beraber geçen zamanlar',     date:'♡', gradient:'linear-gradient(145deg,#0c0018 0%,#28004a 50%,#8800bb 100%)', rotation:6,   x:'8%',  y:'72%', scale:.9,   zBase:5  },
+  { id:13, file: ap('WhatsApp Image 2026-06-23 at 01.23.38.jpeg'),      caption:'Seni çok seviyorum',         date:'♡', gradient:'linear-gradient(145deg,#1a0010 0%,#4d0030 50%,#ff4d88 100%)', rotation:-4,  x:'28%', y:'70%', scale:1,    zBase:7  },
+  { id:14, file: ap('WhatsApp Image 2026-06-23 at 01.23.38 (1).jpeg'),  caption:'Seninle mutlu oldum',        date:'♡', gradient:'linear-gradient(145deg,#0a0a18 0%,#1e1e50 50%,#6666ff 100%)', rotation:5,   x:'52%', y:'74%', scale:.88,  zBase:4  },
+  { id:15, file: ap('WhatsApp Image 2026-06-23 at 01.23.38 (2).jpeg'),  caption:'Her zaman seninleyim',       date:'♡', gradient:'linear-gradient(145deg,#1a0d00 0%,#4d2600 50%,#ff9900 100%)', rotation:-6,  x:'74%', y:'72%', scale:.92,  zBase:6  },
 ]
 
 export default function FloatingAlbum({ onBack }: { onBack: () => void }) {

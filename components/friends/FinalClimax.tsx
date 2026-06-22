@@ -59,7 +59,7 @@ const ALL_PHOTOS = (()=>{
 /* ── Heart geometry ──────────────────────────────────────────── */
 const HEART_POLY = Array.from({length:900},(_,i)=>{
   const t=(i/900)*Math.PI*2
-  return {x:16*Math.pow(Math.sin(t),3), y:13*Math.cos(t)-5*Math.cos(2*t)-2*Math.cos(3*t)-Math.cos(4*t)}
+  return {x:16*Math.pow(Math.sin(t),3), y:-(13*Math.cos(t)-5*Math.cos(2*t)-2*Math.cos(3*t)-Math.cos(4*t))}
 })
 
 function inHeart(px:number,py:number):boolean{
